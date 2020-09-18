@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.action.modules.equip.dao.EquipFaultReportDao">
+	
+	<!-- 插入 -->
+	<insert id="insert">
+		insert into equip_fault_report(
+			id,
+			equip_id,
+			equip_no,
+			equip_type,
+			equip_loc,
+			fault_desc,
+			status,
+			report_person,
+			assign_time,
+			maintenance_worker,
+			del_flag,
+			remarks,
+			create_by,
+			create_date,
+			update_by,
+			update_date
+			
+		)values(
+			#{id},
+			#{equipId},
+			#{equipNo},
+			#{equipType},
+			#{equipLoc},
+			#{faultDesc},
+			#{status},
+			#{reportPerson},
+			#{assignTime},
+			#{maintenanceWorker},
+			#{delFlag},
+			#{remarks},
+			#{createBy.id},
+			#{createDate},
+			#{updateBy.id},
+			#{updateDate}
+		)
+	</insert>
+</mapper>
